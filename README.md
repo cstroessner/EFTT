@@ -19,6 +19,10 @@ After running MATLAB setup.m, you need to copy the file testPoints.mat from the 
 
 **Matlab file descriptions:**
 
+The class @EFTT contains our novel algorithm to approximate functions in the extended functional tensor train format.
+
+The class @FTT contains an approximation algorithm leading to an approximation in the (classical) functional tensor train format.
+
 setup.m: Initalization and correct setting of paths (needs to be run first).
 
 generateData.m: Runs all numerical experiments not involving the solution of PDEs.
