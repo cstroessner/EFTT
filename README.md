@@ -1,7 +1,7 @@
-Code to reproduce the figures in "Functional low-rank approximation based on the extended tensor train format" by C. Stroessner, B. Sun and D. Kressner.
-(Arxiv: https://arxiv.org/abs/TODO.)
+**Code to reproduce the figures in "Functional low-rank approximation based on the extended tensor train format" by C. Stroessner, B. Sun and D. Kressner.
+(Arxiv: https://arxiv.org/abs/TODO.)**
 
-Matlab Dependencies:
+**Matlab dependencies:**
 
 Chebfun (download from https://github.com/chebfun/chebfun)
 
@@ -11,13 +11,13 @@ MATLAB Statistics and Machine Learning Toolbox
 
 MATLAB Partial Differential Equation Toolbox
 
-Python dependencies and installations are described in the notebooks (we use https://github.com/goroda/Compressed-Continuous-Computation and https://fenicsproject.org/).
+**Python dependencies** and installations are described in the notebooks (we use https://github.com/goroda/Compressed-Continuous-Computation and https://fenicsproject.org/).
 
 After running MATLAB setup.m, you need to copy the file testPoints.mat from the test folder into the notebook1 and notebook2 folders.
 
 
 
-Matlab File Descriptions:
+**Matlab file descriptions:**
 
 setup.m: Initalization and correct setting of paths (needs to be run first).
 
@@ -31,7 +31,7 @@ generatePDEData.: Runs and displays the results for all numerical experiments in
 
 
 
-Python File Descriptions:
+**Python file descriptions:**
 
 Notebook1: Generates and displays the data for the table in the appendix and for Figure 3.
 
