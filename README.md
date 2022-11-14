@@ -1,7 +1,7 @@
 **Code to reproduce the figures in "Functional low-rank approximation based on the extended tensor train format" by C. Stroessner, B. Sun and D. Kressner.
 (Arxiv: https://arxiv.org/abs/TODO.)**
 
-**Matlab dependencies:**
+**MATLAB dependencies:**
 
 Chebfun (download from https://github.com/chebfun/chebfun)
 
@@ -17,7 +17,7 @@ After running MATLAB setup.m, you need to copy the file testPoints.mat from the 
 
 
 
-**Matlab file descriptions:**
+**MATLAB file descriptions:**
 
 The class @EFTT contains our novel algorithm to approximate functions in the extended functional tensor train format.
 
