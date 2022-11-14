@@ -40,3 +40,16 @@ generatePDEData.: Runs and displays the results for all numerical experiments in
 Notebook1: Generates and displays the data for the table in the appendix and for Figure 3.
 
 Notebook2: Generates and displays the data for Table 1 which involves the solution of PDEs.
+
+
+**How to obtain and use EFTT approximations:**
+
+You can approximate a function f:[-1,1]^d to R using *eftt = EFTT(f,d)*.
+
+To evaluate the approximation at point x you can use *e.fevaluate(x)*.
+
+To compute the integral over [-1,1]^d of the approximation you can use *e.fintegrate*.
+
+The polynomial degree, the TT and the multilinear rank can be obtained using *e.degree*, *e.ttrank* and *e.tuckerrank*.
+
+
