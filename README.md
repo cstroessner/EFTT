@@ -1,5 +1,5 @@
 **Code to reproduce the figures in "Functional low-rank approximation based on the extended tensor train format" by C. Stroessner, B. Sun and D. Kressner.
-(Arxiv: https://arxiv.org/abs/TODO.)**
+(Arxiv: https://arxiv.org/abs/TODO.)** 
 
 **MATLAB dependencies:**
 
@@ -42,7 +42,7 @@ Notebook1: Generates and displays the data for the table in the appendix and for
 Notebook2: Generates and displays the data for Table 1 which involves the solution of PDEs.
 
 
-**How to obtain and use EFTT approximations:**
+**How to obtain and use EFTT approximations in MATLAB:**
 
 You can approximate a function f:[-1,1]^d to R using *eftt = EFTT(f,d)*.
 
