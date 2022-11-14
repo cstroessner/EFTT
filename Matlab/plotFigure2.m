@@ -10,11 +10,11 @@ figure(8)
 set(gca,'fontsize',10)
 set(figure(8), 'Position', [0 0 370 300])
 for i = [1,3,5]
-plot(dlist1,log10(tabledata(i,:,1)./tabledata(i,:,2)))
+semilogy(dlist1,(tabledata(i,:,1)./tabledata(i,:,2)))
 hold on
 end
 xlabel('dimension $d$','Interpreter','latex')
-ylabel('$\log_{10}$( $L^2$-error EFTT / $L^2$-error DirectTT)','Interpreter','latex')
+ylabel('$L^2$-error EFTT / $L^2$-error DirectTT','Interpreter','latex')
 leg = legend('oscillatory','corner peak','continuous');
 set(leg,'Interpreter','latex','location','northwest');
 print -depsc 'figure/RankImpactError'
