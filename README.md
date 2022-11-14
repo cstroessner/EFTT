@@ -11,7 +11,7 @@ MATLAB Statistics and Machine Learning Toolbox
 
 MATLAB Partial Differential Equation Toolbox
 
-**Python dependencies** and installations are described in the notebooks (we use https://github.com/goroda/Compressed-Continuous-Computation and https://fenicsproject.org/).
+**Python dependencies** and setup are described in the notebooks (we use https://github.com/goroda/Compressed-Continuous-Computation and https://fenicsproject.org/).
 
 After running MATLAB setup.m, you need to copy the file testPoints.mat from the test folder into the notebook1 and notebook2 folders.
 
