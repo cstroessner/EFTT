@@ -46,10 +46,10 @@ Notebook2: Generates and displays the data for Table 1 which involves the soluti
 
 You can approximate a function f:[-1,1]^d to R using *eftt = EFTT(f,d)*.
 
-To evaluate the approximation at point x you can use *e.fevaluate(x)*.
+To evaluate the approximation at point x you can use *eftt.fevaluate(x)*.
 
-To compute the integral over [-1,1]^d of the approximation you can use *e.fintegrate*.
+To compute the integral over [-1,1]^d of the approximation you can use *eftt.fintegrate*.
 
-The polynomial degree, the TT and the multilinear rank can be obtained using *e.degree*, *e.ttrank* and *e.tuckerrank*.
+The polynomial degree, the TT and the multilinear rank can be obtained using *eftt.degree*, *eftt.ttrank* and *eftt.tuckerrank*.
 
 
