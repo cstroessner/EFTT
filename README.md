@@ -1,4 +1,4 @@
-**Code to reproduce the figures in "Approximation in the extended functional tensor train format" by C. Strössner, B. Sun and D. Kressner.
+**Code to reproduce the numerical experiments in "Approximation in the extended functional tensor train format" by C. Strössner, B. Sun and D. Kressner.
 (Arxiv: https://arxiv.org/abs/2211.11338.)** The novel algorithm for approximating in the extended tensor train format is implemented in MATLAB. The comparison with the algorithm in c3py is implemented in Python.
 
 **MATLAB dependencies:**
