@@ -1,16 +1,4 @@
 addpath(pwd)
-cd TT-Toolbox
-addpath(pwd)
-cd cross
-addpath(pwd)
-cd ..
-cd core
-addpath(pwd)
-cd ..
-cd ..
-cd chebfun
-addpath(pwd)
-cd ..
 
 clear
 rng(0)

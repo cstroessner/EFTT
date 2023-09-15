@@ -3,33 +3,30 @@
 clear
 load("data/GenzFuncs.mat")
 
-%% error plot for function
-close all
+figure
 
-figure(8)
-set(gca,'fontsize',10)
-set(figure(8), 'Position', [0 0 370 300])
-for i = [1,3,5]
-semilogy(dlist1,(tabledata(i,:,1)./tabledata(i,:,2)))
-hold on
-end
-xlabel('dimension $d$','Interpreter','latex')
-ylabel('$L^2$-error EFTT / $L^2$-error DirectTT','Interpreter','latex')
-leg = legend('oscillatory','corner peak','continuous');
-set(leg,'Interpreter','latex','location','northwest');
-print -depsc 'figure/RankImpactError'
+t = tiledlayout(3,2,'TileSpacing','Compact','Padding','Compact');
 
-%% eval plot for function
-figure(7)
-set(gca,'fontsize',10)
-set(figure(7), 'Position', [0 0 370 300])
-for i = [1,3,5]
-plot(dlist1,tabledata(i,:,3)./tabledata(i,:,4))
-hold on
+for ii = [1,3,5]
+    nexttile
+    semilogy(dlist1,(tabledata(ii,:,1)))
+    hold on
+    semilogy(dlist1,(tabledata(ii,:,2)))
+    title(funcname{ii},'Interpreter','latex')
+    xlabel('dimension $d$','Interpreter','latex')
+    ylabel('$L^2$-error','Interpreter','latex')
+    if ii == 1
+        leg = legend('EFTT','DirectTT');
+        set(leg,'Interpreter','latex','Location','northwest');
+    end
+
+    nexttile
+    plot(dlist1,(tabledata(ii,:,3)))
+    hold on
+    plot(dlist1,(tabledata(ii,:,4)))
+    title(funcname{ii},'Interpreter','latex')
+    xlabel('dimension $d$','Interpreter','latex')
+    ylabel('\# evals','Interpreter','latex')
 end
-xlabel('dimension $d$','Interpreter','latex')
-ylabel('evals EFTT / evals DirectTT','Interpreter','latex')
-leg = legend('oscillatory','corner peak','continuous');
-ylim([0.1,1])
-set(leg,'Interpreter','latex','Location','southeast');
-print -depsc 'figure/RankImpactEvals'
+set(gcf,'Position', [0 0 800 600])
+print -depsc 'figure/Figure2'

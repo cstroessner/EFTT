@@ -1,7 +1,7 @@
 % Display the resuts from generateData as tables
 
 
-clear;clc;
+clear;%clc;
 %% Print results for all experiments except cookie
 fprintf('\n\n-------------------------SUMMARY OF RESULTS-------------------------\n\n\n');
 
@@ -35,14 +35,25 @@ end
 
 clear
 load('data/20BenchFuncs')
-fprintf('-----------Table: EFTT vs DirectTT for 20 benchmark functions with fixed n = 100-----------\n')
-fprintf('|   function  |  method  |   error  |   eval  |   dof  | TTrank | Tuckerrank | reduce eval(%%) | reduce storage(%%) |\n')
+stds = zeros(2*n_funcs,3);
 for ii = 1:n_funcs
-    fprintf('| %11s |   EFTT   | %8.2e | %7.i | %6.i |   %2.i   |     %2.i     |     %6.1f     |       %6.1f      |\n',funcname{ii},...
-        tabledata(2*ii-1,1),round(tabledata(2*ii-1,2)),round(tabledata(2*ii-1,3)),round(tabledata(2*ii-1,4)),...
+    stds(2*ii-1,1) = std(log(EFTTerror(:,ii)));
+    stds(2*ii-1,2) = std(EFTTeval(:,ii));
+    stds(2*ii-1,3) = std(EFTTdof(:,ii));
+
+    stds(2*ii,1) = std(log(FTTerror(:,ii)));
+    stds(2*ii,2) = std(FTTeval(:,ii));
+    stds(2*ii,3) = std(FTTdof(:,ii));
+end
+
+fprintf('-----------Table: EFTT vs DirectTT for 20 benchmark functions with fixed n = 100-----------\n')
+fprintf('|   function  |  method  |   error  | errorstd |   eval  | evalstd |   dof  | dofstd | TTrank | Tuckerrank | reduce eval(%%) | reduce storage(%%) |\n')
+for ii = 1:n_funcs
+    fprintf('| %11s |   EFTT   | %8.2e | %8.2e | %7i | %7i | %6i | %6i |   %2.i   |     %2.i     |     %6.1f     |       %6.1f      |\n',funcname{ii},...
+        tabledata(2*ii-1,1),stds(2*ii-1,1),round(tabledata(2*ii-1,2)),round(stds(2*ii-1,2)),round(tabledata(2*ii-1,3)),round(stds(2*ii-1,3)),round(tabledata(2*ii-1,4)),...
         round(tabledata(2*ii-1,5)),tablecompare(ii,1)*100,tablecompare(ii,2)*100)
-    fprintf('|             | DirectTT | %8.2e | %7.i | %6.i |   %2.i   |            |                |                   |\n',...
-        tabledata(2*ii,1),round(tabledata(2*ii,2)),round(tabledata(2*ii,3)),round(tabledata(2*ii,4)))
+    fprintf('|             | DirectTT | %8.2e | %8.2e | %7i | %7i | %6i | %6i |   %2.i   |            |                |                   |\n',...
+        tabledata(2*ii,1),stds(2*ii,1),round(tabledata(2*ii,2)),round(stds(2*ii,2)),round(tabledata(2*ii,3)),round(stds(2*ii,3)),round(tabledata(2*ii,4)))
 end
 
 clear
