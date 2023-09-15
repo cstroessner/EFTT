@@ -1,7 +1,7 @@
 % Display the resuts from generateData as tables
 
 
-clear;%clc;
+clear;clc;
 %% Print results for all experiments except cookie
 fprintf('\n\n-------------------------SUMMARY OF RESULTS-------------------------\n\n\n');
 
